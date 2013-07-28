@@ -1,0 +1,247 @@
+ 
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+strong {font-weight: bold;}
+em {font-style: italic;}
+ 
+html {
+	
+}
+
+body {
+	margin: 0; 
+	padding: 0;
+	border: 15px solid #333;
+ 	color: #333;
+    font: 12px 'Arvo', Helvetica, Arial, sans-serif;
+	text-align: left;
+	background: #fafafa;
+ 	position: relative;
+	/*cursor: none; */ 
+	-webkit-font-smoothing:antialiased;
+}
+ 
+a {
+	color: #333;
+	text-decoration: none;
+	/*border-bottom: 1px solid #ccc;*/
+}
+
+img {
+	border: none;
+}
+
+a:focus {outline: 0;}
+
+#container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+    position: relative;
+}
+
+header {
+	margin: 140px auto;
+	width: 500px;
+	text-align: center;
+}
+
+h1 {
+    font: bold 55px 'Arvo', Helvetica, Arial, sans-serif;
+    line-height: 65px;
+    letter-spacing: -4px;
+}
+ 
+p {
+    font-family: 'Pt sans', Georgia, Times, serif;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+#checks {
+	margin: 30px auto;
+	width: 220px;
+	text-align: center;
+	z-index: 2;
+}
+
+#checks .check {
+	margin: 0 40px 0 0;
+	width: 80px;
+	float: left;
+	text-align: center;
+	font:  13px/1 'Arvo', Helvetica, Arial, sans-serif;
+}
+
+#checks .check#button-2 {
+	margin: 0 0px 0 0;
+}
+
+#checks .check-button {
+	margin: 0 auto 5px auto;
+	width: 50px;
+	height: 50px;
+	background: #222;
+	cursor: pointer;
+	border-radius: 34em;
+	color: #eee;
+	font: bold 27px/1.9 'Arvo', Helvetica, Arial, sans-serif;
+	text-align: center;	
+}
+
+
+
+/* LAYOUT */
+
+#layout {
+	width: 100%;
+	sheight: 100%;
+    left: 0;
+    top: 0;
+    overflow:visible;
+   	z-index: 10;
+}
+
+.spaced {
+    letter-spacing : -1px;
+}
+
+#openhelp {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	z-index: 200;
+	background: #222;
+	cursor: pointer;
+	border-radius: 34em;
+	color: #eee;
+	font: bold 27px/1.9 'Arvo', Helvetica, Arial, sans-serif;
+	text-align: center;	
+}
+
+
+/* TIMER */
+
+#htp-timer {
+	margin: 0;
+	padding: 0;
+	width: 130px;
+	height: 175px;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 33300;
+	display: none;
+ }
+
+/* INFO */
+
+#modal-one {
+	margin: -200px 0 0 -200px;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 422px;
+	height: 276px;
+	z-index: 200;
+	background: #111;
+	display: none;
+}
+
+#modal-one h3 {
+	margin: 20px 0 0 30px;
+	padding: 0;
+	width: 222px;
+	z-index: 200;
+	 	color: #fff;
+	font-size: 25px;
+}
+
+
+#modal-cont  {
+	margin: 20px 0 0 0px;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#modal-one #modal-close {
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 40px;
+	height: 40px;
+	z-index: 200;
+ 	cursor: pointer;
+ 	background: #111 url(../img/close.png) no-repeat;
+}
+
+#modal-one #inst-cont {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 411px;
+	height: 258px;
+}
+
+#button-close {
+	margin: 140px auto 0 auto;
+	padding: 13px 15px 13px 15px;
+	display: block;
+	width: 222px;
+	z-index: 200;
+	font-size: 25px;
+	color: #fff;
+	border: none;
+	border-radius:3px;
+	background: #fd6e64;
+	font: 16px/1.2 'Arvo', Helvetica, Arial, sans-serif;
+	z-index: 250;
+}
+
+/* VISUAL FEEDBACK */
+ 
+#index {
+	position: absolute;
+	top: 150px;
+	left: 150px;
+	width: 50px;
+	height: 50px;
+	background: #f10;
+	opacity: 0.6;
+	border-radius: 4em;
+	z-index: 10000;
+}
+ 
+#download {
+	margin: 300px 0 0 0;
+	padding: 0;
+	float: left;
+	clear: both;
+	width: 100%;
+    position: relative;
+    text-align: center;
+}
+ 

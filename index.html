@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+
+<!-- Hover The Top! - Clickless Interface by Marco Rosella [www.marcorosella.com] --> 
+
+<meta charset="utf-8" />
+<title>Hover The Top! - Clickless interface for LeapJS</title>
+<meta name="description" content=" "/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta property="og:image" content="http://marcorosella.com/lab/hoverthetop/img/fb.jpg"/>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<link rel="shortcut icon" href="img/favicon.gif"/>
+
+<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+
+<script src="js/lib/jquery-1.9.1.min.js"></script>
+<script src="js/lib/raphael-min.js"></script>
+<script src="js/lib/leap.min.js"></script>
+
+<script src="js/hoverthetop.js"></script>
+
+
+</head>
+ 
+<body>
+  <script>
+    
+    $(document).ready(function() {
+
+      
+
+
+      hoverTheTop.init();
+      
+
+
+
+
+
+      //for this demo only
+      resize();
+      $(window).resize(function() {
+          resize();
+      });
+           
+    });
+
+    function resize() {
+        $("#container").css({"height": $(window).height()-170});
+    }
+
+   
+  </script>
+
+
+<div id="container">
+  <header>
+    <h1>Hover the top!</h1>
+    <p>HTML5 clickless navigation for <a href="https://www.leapmotion.com/" target="_blank">Leap Motion</a>'s <a href="https://www.leapmotion.com/" target="_blank">LeapJS</a>.</p>
+  </header>
+
+
+  <div id="checks">
+
+    <div id="button-1" class="check clickless" data-dest="modal-one" data-action="open">
+      <div class="check-button">£</div>
+      Hover me!
+    </div>
+
+    <div id="button-2" class="check clickless" data-dest="modal-one" data-action="open">
+      <div class="check-button">$</div>
+      Hover me!
+    </div> 
+
+
+  </div>
+ 
+  <div id="download">Download on Github <em>(coming soon)</em></div>
+
+ 
+<div id="modal-one">
+    <div id="modal-close" class="clickless" data-dest="modal-one" data-action="close"></div>
+    <h3>Lorem Ipsum</h3>
+    <div id="modal-cont">
+      <!-- <button id="button-close" class="clickless" data-dest="modal-one" data-action="close">Close me</button> -->
+    </div>
+
+  </div>
+</div>
+
+ 
+
+
+
+<div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">?</div>
+
+
+ 
+</body>
+</html>
+
