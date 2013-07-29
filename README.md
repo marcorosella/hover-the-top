@@ -9,7 +9,6 @@ How it works
 Call the script at the onload of the page:
 ```
 hoverTheTop.init();
-
 ```
 Add a "clickless" class , the id of the modal window you want to interact to and the action to the desired clickless element:
 
