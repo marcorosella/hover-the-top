@@ -145,16 +145,17 @@ p {
 	top: 50%;
 	left: 50%;
 	width: 422px;
-	height: 296px;
+	height: 286px;
 	z-index: 200;
 	background: #50B38D;
-	sdisplay: none;
+	display: none;
 }
 
 #modal-one h3 {
 	margin: 20px 0 0 0px;
-	padding: 10px 0 10px 30px;
-	width: 222px;
+	padding: 10px 30px 10px 30px;
+	float: left;
+	display: inline;
 	z-index: 200;
 	color: #fafafa;
 	font-size: 25px;
@@ -167,6 +168,13 @@ p {
 	float: left;
 	text-align: left;
 	color: #fff;
+	line-height: 0.9;
+}
+
+#modal-cont p {
+	margin: 0px 0 0 0px;
+	padding: 0;
+	line-height: 1.5;
 }
 
 #modal-one #modal-close {
