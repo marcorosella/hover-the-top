@@ -37,8 +37,6 @@
 
 
 
-
-
       //for this demo only
       resize();
       $(window).resize(function() {
@@ -48,7 +46,7 @@
     });
 
     function resize() {
-        $("#container").css({"height": $(window).height()-170});
+      $("#container").css({"height": $(window).height()-30});
     }
 
    
@@ -77,24 +75,24 @@
 
   </div>
  
-  <div id="download">Download on Github <em>(coming soon)</em></div>
 
- 
-<div id="modal-one">
-    <div id="modal-close" class="clickless" data-dest="modal-one" data-action="close"></div>
-    <h3>Lorem Ipsum</h3>
-    <div id="modal-cont">
-      <!-- <button id="button-close" class="clickless" data-dest="modal-one" data-action="close">Close me</button> -->
-    </div>
+  <div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">?</div>
+
+  <div id="modal-one">
+      <div id="modal-close" class="clickless" data-dest="modal-one" data-action="close"></div>
+      <h3>Lorem Ipsum</h3>
+      <div id="modal-cont">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor nunc non venenatis venenatis. Curabitur dictum dui eget diam consequat, id mollis tellus consectetur. Curabitur fermentum ante a ultrices molestie. Ut vitae ligula nec urna tempus varius. Curabitur pharetra velit et nisi vulputate dapibus.</p>
+        <!-- <button id="button-close" class="clickless" data-dest="modal-one" data-action="close">Close me</button> -->
+      </div>
 
   </div>
+
+  <div id="download">Read about <a href="http://marcorosel.la/post/56740275375/hover-the-top-clickless-ui-for-leapjs" target="_blank">on my blog</a> and download/clone <a href="https://github.com/marcorosella/hover-the-top" target="_blank">on Github</a>.</div>
+
 </div>
 
- 
 
-
-
-<div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">?</div>
 
 
  

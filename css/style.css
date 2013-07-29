@@ -26,7 +26,7 @@ body {
 	margin: 0; 
 	padding: 0;
 	border: 15px solid #333;
- 	color: #333;
+ 	color: #222;
     font: 12px 'Arvo', Helvetica, Arial, sans-serif;
 	text-align: left;
 	background: #fafafa;
@@ -52,6 +52,7 @@ a:focus {outline: 0;}
 	padding: 0;
 	width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 header {
@@ -103,23 +104,6 @@ p {
 	text-align: center;	
 }
 
-
-
-/* LAYOUT */
-
-#layout {
-	width: 100%;
-	sheight: 100%;
-    left: 0;
-    top: 0;
-    overflow:visible;
-   	z-index: 10;
-}
-
-.spaced {
-    letter-spacing : -1px;
-}
-
 #openhelp {
 	margin: 0;
 	padding: 0;
@@ -152,7 +136,7 @@ p {
 	display: none;
  }
 
-/* INFO */
+/* MODAL */
 
 #modal-one {
 	margin: -200px 0 0 -200px;
@@ -161,41 +145,44 @@ p {
 	top: 50%;
 	left: 50%;
 	width: 422px;
-	height: 276px;
+	height: 296px;
 	z-index: 200;
-	background: #111;
-	display: none;
+	background: #50B38D;
+	sdisplay: none;
 }
 
 #modal-one h3 {
-	margin: 20px 0 0 30px;
-	padding: 0;
+	margin: 20px 0 0 0px;
+	padding: 10px 0 10px 30px;
 	width: 222px;
 	z-index: 200;
-	 	color: #fff;
+	color: #fafafa;
 	font-size: 25px;
+	background: #222;
 }
 
-
 #modal-cont  {
-	margin: 20px 0 0 0px;
-	padding: 0;
-	width: 100%;
-	text-align: center;
+	margin: 15px 0 0 0px;
+	padding: 0px 30px 0px 30px;
+	float: left;
+	text-align: left;
+	color: #fff;
 }
 
 #modal-one #modal-close {
 	margin: 0;
-	padding: 0;
+	padding: 5px;
+	border: none;
+	border-radius: 4em;
 	width: 300px;
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 20px;
+	right: 20px;
 	width: 40px;
 	height: 40px;
 	z-index: 200;
  	cursor: pointer;
- 	background: #111 url(../img/close.png) no-repeat;
+ 	background: #222 url(../img/close.png) no-repeat 6px 5px;
 }
 
 #modal-one #inst-cont {
@@ -209,19 +196,19 @@ p {
 #button-close {
 	margin: 140px auto 0 auto;
 	padding: 13px 15px 13px 15px;
+	border: 1px solid #fafafa;
 	display: block;
 	width: 222px;
 	z-index: 200;
 	font-size: 25px;
-	color: #fff;
+	color: #fafafa;
 	border: none;
-	border-radius:3px;
-	background: #fd6e64;
+	border-radius: 3px;
 	font: 16px/1.2 'Arvo', Helvetica, Arial, sans-serif;
 	z-index: 250;
 }
 
-/* VISUAL FEEDBACK */
+/* CURSOR */
  
 #index {
 	position: absolute;
@@ -236,12 +223,19 @@ p {
 }
  
 #download {
-	margin: 300px 0 0 0;
+	margin: 0px 0 0 0;
 	padding: 0;
-	float: left;
-	clear: both;
 	width: 100%;
-    position: relative;
+	bottom: 50px;
+	left: 0;
+    position: absolute;
     text-align: center;
+    font-size: 14px;
+    z-index: 100002;
 }
- 
+
+#download a {
+	margin: 0px 0 0 0;
+	padding: 0 0 3px 0;
+	border-bottom: 1px solid #666;
+}

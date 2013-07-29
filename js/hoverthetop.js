@@ -38,9 +38,9 @@ var hoverTheTop = {
             return {path: path};
         };
         
-        var timerCc = this.paper.circle(65,65,50).attr({stroke: "#111", "fill": "none"});
+        var timerCc = this.paper.circle(65,65,50).attr({stroke: "#222", "fill": "none"});
         var timerBg = this.paper.circle(65,65,55).attr({stroke: "none", "fill": "transparent"});
-        this.timerGraph = this.paper.path().attr({stroke: "#111", "stroke-width": 13, arc: [0, 360, 37]});
+        this.timerGraph = this.paper.path().attr({stroke: "#222", "stroke-width": 13, arc: [0, 360, 37]});
           this.timerG = this.paper.set();
         this.timerG.push(timerCc,timerBg,this.timerGraph);
         this.timerG.hide();
