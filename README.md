@@ -6,7 +6,12 @@ A simple clickless interface for the Leapmotion JavaScript framework, LeapJS (ht
 
 How it works
 -------------------------
-Add a class "clickless", the id of the modal window you want to interact to and the action to the desired clickless element:
+Call the script at the onload of the page:
+```
+hoverTheTop.init();
+
+```
+Add a "clickless" class , the id of the modal window you want to interact to and the action to the desired clickless element:
 
 ```
 <div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">Open Me</div>
