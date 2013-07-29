@@ -2,7 +2,7 @@ Hover the top!
 =============
 
 A simple clickless interface for the Leapmotion JavaScript framework, LeapJS (http://js.leapmotion.com).
-It lets open and close modal windows with the hover on elements displaying a SVG timer.
+It lets open and close modal windows with the hover on elements displaying a circular SVG timer.
  
 
 Usage
