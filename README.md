@@ -1,12 +1,12 @@
 Hover the top!
 =============
 
-A simple clickless interface for the Leapmotion JavaScript framework, LeapJS (http://js.leapmotion.com)
+A simple clickless interface for the Leapmotion JavaScript framework, LeapJS (http://js.leapmotion.com). It lets open and close modal windows hovering on elements displaying a SVG timer.
  
 
 How it works
 -------------------------
-Add a class to the element you want to be clickless:
+Add a class "clickless", the id of the modal window you want to interact to and the action to the desired clickless element:
 
 ```
 <div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">Open Me</div>
