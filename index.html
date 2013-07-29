@@ -15,9 +15,9 @@
 <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 
-<script src="js/lib/jquery-1.9.1.min.js"></script>
-<script src="js/lib/raphael-min.js"></script>
-<script src="js/lib/leap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//js.leapmotion.com/0.2.0-beta6/leap.min.js"></script>
 
 <script src="js/hoverthetop.js"></script>
 
@@ -42,12 +42,23 @@
       $(window).resize(function() {
           resize();
       });
-           
+      
+      if(is_touch_device()){
+        $("#container").hide();
+        $("#mobile-alert").show();
+
+      }
+
     });
 
     function resize() {
-      $("#container").css({"height": $(window).height()-30});
+      $("body, #container").css({"width": $(window).width()-30,"height": $(window).height()-30});
     }
+
+    function is_touch_device() {
+      return !!('ontouchstart' in window) // works on most browsers 
+          || !!('onmsgesturechange' in window); // works on ie10
+    };
 
    
   </script>
@@ -92,7 +103,9 @@
 
 </div>
 
-
+<div id="mobile-alert">
+  Sorry, this experiment is for desktop only.
+</div>
 
 
  
