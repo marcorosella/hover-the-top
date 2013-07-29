@@ -19,7 +19,7 @@ strong {font-weight: bold;}
 em {font-style: italic;}
  
 html {
-	
+	overflow: hidden;
 }
 
 body {
