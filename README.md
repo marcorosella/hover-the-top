@@ -5,15 +5,13 @@ A simple clickless interface for the Leapmotion JavaScript framework, LeapJS (ht
  
 
 How it works
-=============
+-------------------------
 Add a class to the element you want to be clickless:
 
 ```
-<div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">?</div>
-
+<div id="openhelp" class="clickless" data-dest="modal-one" data-action="open">Open Me</div>
 ```
 
 Demo
-=============
-
-A simple clickless UI for Leapmotion's LeapJS.
+-------------------------
+http://marcorosella.com/lab/hoverthetop/
