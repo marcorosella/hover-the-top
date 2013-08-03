@@ -1,5 +1,5 @@
 /* Hover The Top! - A simple clickless user interface for Leap Motion's LeapJS
-v0.1 - July 11, 2013
+v0.2 - August 3, 2013
 
 by Marco Rosella 
 
@@ -16,6 +16,7 @@ var hoverTheTop = {
     numTxt: null,
     timerG: null,
     timerGraph: null,
+    intervalTime: 1200,
     intervalID: null,
     paper: null,
     clickElms: [],
@@ -41,19 +42,17 @@ var hoverTheTop = {
         var timerCc = this.paper.circle(65,65,50).attr({stroke: "#222", "fill": "none"});
         var timerBg = this.paper.circle(65,65,55).attr({stroke: "none", "fill": "transparent"});
         this.timerGraph = this.paper.path().attr({stroke: "#222", "stroke-width": 13, arc: [0, 360, 37]});
-          this.timerG = this.paper.set();
+        this.timerG = this.paper.set();
         this.timerG.push(timerCc,timerBg,this.timerGraph);
         this.timerG.hide();
  
-          $(".clickless").each(function() {
+        $(".clickless").each(function() {
             var dest = $(this).attr("data-dest"); 
             var action = $(this).attr("data-action"); 
             var elId = $(this).attr("id"); 
             var el = new hoverTheTop.hoverEl({id: elId, dest: dest, action: action});
             hoverTheTop.clickElms.push(el);
-          });
-
- 
+        });
 
         var fingers = {};
         var spheres = {};
@@ -93,14 +92,10 @@ var hoverTheTop = {
                 $("#index").css({"top": hoverTheTop.clientY-40 , "left": hoverTheTop.clientX -40});
         });
 
-      
-
-        setInterval(function() {
-            
+        setInterval(function() {            
             jQuery.each(hoverTheTop.clickElms, function() {
                 this.check();
             });
-            
         }, 50);
     },
     open: function(section) {
@@ -112,32 +107,24 @@ var hoverTheTop = {
     start: function(section,open) {
         $("#htp-timer").show();
         this.timerG.show();
-        this.timerGraph.animate({arc: [359.99, 360, 37]}, 1500, function() {});
+        this.timerGraph.animate({arc: [359.99, 360, 37]}, hoverTheTop.intervalTime, function() {});
 
-        var countSec = 2;
-        function updateTxt() {
-            countSec--;
-            if(countSec == -1) {
-                
-                if(open) {
-                    $("#"+section).fadeIn(500);
-                } else {
-                    $("#"+section).fadeOut(500);
-                }
-                
-                $("#htp-timer").hide();
-                
-                window.clearInterval(hoverTheTop.intervalID);
+        function interact() { 
+            if(open) {
+                $("#"+section).fadeIn(500);
+            } else {
+                $("#"+section).fadeOut(500);
             }
+            
+            $("#htp-timer").hide();
+            window.clearInterval(hoverTheTop.intervalID);
         }
-        updateTxt();
-        this.intervalID = window.setInterval(updateTxt, 1000);
+        this.intervalID = window.setInterval(interact, hoverTheTop.intervalTime);
     },
     stop: function(action) {
         $("#clickless").hide();
         this.timerGraph.stop().attr({arc: [0, 360, 37]});
         this.timerG.hide();
-     //   this.numTxt.attr({"text": "3"});
         window.clearInterval(hoverTheTop.intervalID);
     },
     hoverEl: function(args) {
